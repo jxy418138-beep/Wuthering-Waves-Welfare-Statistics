@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>鸣潮福利统计</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#6b7385;--ac:#2f6df6;--bd:#e3e6ee}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040}}
+:root[data-theme="dark"]{--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:16px;max-width:720px;margin-inline:auto}
+h1{font-size:20px;margin:4px 0 12px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px}
+button,input[type=search],textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 12px}
+button{cursor:pointer;background:var(--ac);color:#fff;border:0}
+textarea{width:100%;height:70px;box-sizing:border-box;margin-top:8px}
+input[type=search]{width:100%;box-sizing:border-box;margin-bottom:12px}
+.stats{display:flex;gap:8px;margin-bottom:12px}.stat{flex:1;text-align:center}.stat b{display:block;font-size:22px;color:var(--ac)}
+.mut{color:var(--mut);font-size:13px}
+.code{display:inline-block;font-family:ui-monospace,monospace;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:2px 8px;margin:3px 4px 3px 0;cursor:pointer}
+ul{padding-left:18px;margin:6px 0}
+</style>
+</head>
+<body>
+<h1>鸣潮福利统计</h1>
+<div class="card">
+  <div class="mut">数据由服务器每天自动抓取；也可手动导入：</div><input type="file" id="f" accept=".json">
+  <textarea id="t" placeholder="或粘贴爬虫生成的 data.json 内容"></textarea>
+  <button id="go" style="margin-top:8px">载入</button>
+  <div class="mut" id="upd"></div>
+</div>
+<div id="app"></div>
+<script>
+const $=id=>document.getElementById(id);
+function load(txt){
+  let d;try{d=JSON.parse(txt)}catch(e){alert("JSON 格式不正确");return}
+  try{localStorage.setItem("wuwa",txt)}catch(e){}
+  render(d);
+}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+let DATA=null;
+function render(d){
+  DATA=d;$("upd").textContent=d.updated?"数据更新于 "+d.updated:"";
+  const vs=Object.entries(d.versions||{});
+  const nc=vs.reduce((a,[,v])=>a+v.codes.length,0),nw=vs.reduce((a,[,v])=>a+v.welfare.length,0);
+  let h=`<div class="stats"><div class="card stat"><b>${vs.length}</b><span class="mut">版本</span></div><div class="card stat"><b>${nc}</b><span class="mut">兑换码</span></div><div class="card stat"><b>${nw}</b><span class="mut">福利条目</span></div></div><input type="search" id="q" placeholder="搜索版本 / 兑换码 / 福利">`;
+  h+=`<div id="list"></div>`;$("app").innerHTML=h;
+  $("q").oninput=draw;draw();
+}
+function draw(){
+  const q=($("q")?.value||"").trim().toLowerCase();
+  const out=Object.entries(DATA.versions).reverse().map(([ver,v])=>{
+    const codes=v.codes.filter(c=>!q||(ver+c.code).toLowerCase().includes(q));
+    const wel=v.welfare.filter(w=>!q||(ver+w.text).toLowerCase().includes(q)).sort((a,b)=>(a.kind==='汇总'?0:1)-(b.kind==='汇总'?0:1));
+    if(!codes.length&&!wel.length)return"";
+    return `<div class="card"><b>${esc(ver)} 版本</b> <span class="mut">兑换码 ${v.codes.length} · 福利 ${v.welfare.length}</span>
+    <div>${codes.map(c=>`<span class="code" data-c="${esc(c.code)}" title="${esc(c.source)}，点击复制">${esc(c.code)}</span>`).join("")}</div>
+    <ul>${wel.map(w=>`<li>${w.kind==='汇总'?'<b>'+esc(w.text)+'</b>':esc(w.text)} <a class="mut" href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.source)}</a></li>`).join("")}</ul></div>`}).join("");
+  $("list").innerHTML=out||'<div class="mut">没有匹配的结果</div>';
+  document.querySelectorAll(".code").forEach(e=>e.onclick=()=>{navigator.clipboard?.writeText(e.dataset.c);e.style.borderColor="var(--ac)"});
+}
+$("f").onchange=e=>e.target.files[0]?.text().then(load);
+$("go").onclick=()=>$("t").value.trim()&&load($("t").value);
+fetch("data.json?t="+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{try{const s=localStorage.getItem("wuwa");if(s)render(JSON.parse(s))}catch(e){}});
+</script>
+</body>
+</html>
