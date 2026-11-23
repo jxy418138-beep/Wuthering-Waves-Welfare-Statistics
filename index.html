@@ -4,65 +4,88 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>鸣潮福利统计</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#2f6df6">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#6b7385;--ac:#2f6df6;--bd:#e3e6ee}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040}}
-:root[data-theme="dark"]{--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#6b7385;--ac:#2f6df6;--bd:#e3e6ee;--hd:#eef2ff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040;--hd:#232a3d}}
+:root[data-theme="dark"]{--bg:#12141b;--card:#1b1f2a;--tx:#e8ebf3;--mut:#8f97ab;--ac:#6b9bff;--bd:#2a3040;--hd:#232a3d}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:16px;max-width:720px;margin-inline:auto}
-h1{font-size:20px;margin:4px 0 12px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:12px}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;padding:12px;max-width:820px;margin-inline:auto}
+h1{font-size:19px;margin:4px 0 10px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.pad{padding:10px 12px}
 button,input[type=search],textarea{font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 12px}
 button{cursor:pointer;background:var(--ac);color:#fff;border:0}
-textarea{width:100%;height:70px;box-sizing:border-box;margin-top:8px}
-input[type=search]{width:100%;box-sizing:border-box;margin-bottom:12px}
-.stats{display:flex;gap:8px;margin-bottom:12px}.stat{flex:1;text-align:center}.stat b{display:block;font-size:22px;color:var(--ac)}
-.mut{color:var(--mut);font-size:13px}
-.code{display:inline-block;font-family:ui-monospace,monospace;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:2px 8px;margin:3px 4px 3px 0;cursor:pointer}
-ul{padding-left:18px;margin:6px 0}
+textarea{width:100%;height:60px;box-sizing:border-box;margin-top:6px}
+input[type=search]{width:100%;box-sizing:border-box;margin-bottom:10px}
+.mut{color:var(--mut);font-size:12px}
+.vh{display:flex;align-items:baseline;gap:10px;background:var(--hd);padding:8px 12px;border-bottom:1px solid var(--bd)}
+.vn{font-size:26px;font-weight:700;color:var(--ac);line-height:1}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:560px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:top;white-space:nowrap}
+th{font-size:12px;color:var(--mut);font-weight:600;background:var(--card)}
+td.n{white-space:normal;min-width:130px}
+td.r{white-space:normal;min-width:120px}
+tr:last-child td{border-bottom:0}
+.tag{display:inline-block;background:var(--hd);color:var(--ac);border-radius:6px;padding:0 6px;margin:1px 3px 1px 0;font-size:12px}
+.code{display:inline-block;font-family:ui-monospace,monospace;background:var(--bg);border:1px solid var(--bd);border-radius:6px;padding:1px 8px;margin:3px 4px 3px 0;cursor:pointer;font-size:13px}
+details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:12px}
+ul{padding-left:18px;margin:4px 0}
 </style>
 </head>
 <body>
 <h1>鸣潮福利统计</h1>
-<div class="card">
-  <div class="mut">数据由服务器每天自动抓取；也可手动导入：</div><input type="file" id="f" accept=".json">
-  <textarea id="t" placeholder="或粘贴爬虫生成的 data.json 内容"></textarea>
-  <button id="go" style="margin-top:8px">载入</button>
-  <div class="mut" id="upd"></div>
-</div>
-<div id="app"></div>
+<details class="card pad" id="imp"><summary>手动导入 data.json</summary>
+  <input type="file" id="f" accept=".json">
+  <textarea id="t" placeholder="或粘贴 data.json 内容"></textarea>
+  <button id="go" style="margin-top:6px">载入</button>
+</details>
+<div class="mut" id="upd" style="margin-bottom:8px"></div>
+<div id="app"><div class="mut">加载中…</div></div>
 <script>
 const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let DATA=null;
 function load(txt){
   let d;try{d=JSON.parse(txt)}catch(e){alert("JSON 格式不正确");return}
   try{localStorage.setItem("wuwa",txt)}catch(e){}
   render(d);
 }
-function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
-let DATA=null;
+const md=s=>s?s.slice(5):"—";            // 2026-10-08 04:00 -> 10-08 04:00
+const dur=a=>a.days==null||a.days===""?"—":(typeof a.days==="number"?a.days+" 天":a.days);
 function render(d){
   DATA=d;$("upd").textContent=d.updated?"数据更新于 "+d.updated:"";
-  const vs=Object.entries(d.versions||{});
-  const nc=vs.reduce((a,[,v])=>a+v.codes.length,0),nw=vs.reduce((a,[,v])=>a+v.welfare.length,0);
-  let h=`<div class="stats"><div class="card stat"><b>${vs.length}</b><span class="mut">版本</span></div><div class="card stat"><b>${nc}</b><span class="mut">兑换码</span></div><div class="card stat"><b>${nw}</b><span class="mut">福利条目</span></div></div><input type="search" id="q" placeholder="搜索版本 / 兑换码 / 福利">`;
-  h+=`<div id="list"></div>`;$("app").innerHTML=h;
+  const vs=Object.keys(d.versions||{});
+  $("app").innerHTML=`<input type="search" id="q" placeholder="搜索版本 / 活动 / 兑换码">`+`<div id="list"></div>`;
   $("q").oninput=draw;draw();
 }
 function draw(){
   const q=($("q")?.value||"").trim().toLowerCase();
-  const out=Object.entries(DATA.versions).reverse().map(([ver,v])=>{
-    const codes=v.codes.filter(c=>!q||(ver+c.code).toLowerCase().includes(q));
-    const wel=v.welfare.filter(w=>!q||(ver+w.text).toLowerCase().includes(q)).sort((a,b)=>(a.kind==='汇总'?0:1)-(b.kind==='汇总'?0:1));
-    if(!codes.length&&!wel.length)return"";
-    return `<div class="card"><b>${esc(ver)} 版本</b> <span class="mut">兑换码 ${v.codes.length} · 福利 ${v.welfare.length}</span>
-    <div>${codes.map(c=>`<span class="code" data-c="${esc(c.code)}" title="${esc(c.source)}，点击复制">${esc(c.code)}</span>`).join("")}</div>
-    <ul>${wel.map(w=>`<li>${w.kind==='汇总'?'<b>'+esc(w.text)+'</b>':esc(w.text)} <a class="mut" href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.source)}</a></li>`).join("")}</ul></div>`}).join("");
-  $("list").innerHTML=out||'<div class="mut">没有匹配的结果</div>';
+  const html=Object.entries(DATA.versions).reverse().map(([ver,v])=>{
+    const acts=(v.activities||[]).filter(a=>!q||(ver+a.name+a.type+(a.reward||[]).join("")).toLowerCase().includes(q));
+    const codes=(v.codes||[]).filter(c=>!q||(ver+c.code).toLowerCase().includes(q));
+    const sums=(v.welfare||[]).filter(w=>w.kind==="汇总");
+    if(!acts.length&&!codes.length&&q)return"";
+    const rows=acts.map(a=>`<tr><td class="n"><b>${esc(a.name)}</b><div class="mut">${esc(a.type)}</div></td><td>${md(a.start)}</td><td>${a.end==="永久"||a.end==="下版本前"?esc(a.end):md(a.end)}</td><td>${dur(a)}</td><td class="r">${(a.reward||[]).map(r=>`<span class="tag">${esc(r)}</span>`).join("")||'<span class="mut">—</span>'}</td></tr>`).join("");
+    return `<div class="card"><div class="vh"><span class="vn">${esc(ver)}</span><span class="mut">${v.start?esc(v.start)+" 开服":""} · 活动 ${(v.activities||[]).length} · 兑换码 ${(v.codes||[]).length}</span></div>
+    ${rows?`<div class="scroll"><table><thead><tr><th>活动</th><th>开始</th><th>结束</th><th>持续</th><th>福利</th></tr></thead><tbody>${rows}</tbody></table></div>`:`<div class="pad mut">暂无活动时间表（需要该版本的官方公告链接）</div>`}
+    ${codes.length||sums.length?`<div class="pad">${codes.map(c=>`<span class="code" data-c="${esc(c.code)}" title="${esc(c.source)}，点击复制">${esc(c.code)}</span>`).join("")}${sums.length?`<details><summary>星声/抽数汇总 ${sums.length} 条</summary><ul>${sums.map(w=>`<li>${esc(w.text)} <a class="mut" href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.source)}</a></li>`).join("")}</ul></details>`:""}</div>`:""}</div>`}).join("");
+  $("list").innerHTML=html||'<div class="mut">没有匹配的结果</div>';
   document.querySelectorAll(".code").forEach(e=>e.onclick=()=>{navigator.clipboard?.writeText(e.dataset.c);e.style.borderColor="var(--ac)"});
 }
 $("f").onchange=e=>e.target.files[0]?.text().then(load);
 $("go").onclick=()=>$("t").value.trim()&&load($("t").value);
-fetch("data.json?t="+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{try{const s=localStorage.getItem("wuwa");if(s)render(JSON.parse(s))}catch(e){}});
+fetch("data.json?t="+Date.now()).then(r=>r.ok?r.json():Promise.reject()).then(render).catch(()=>{
+  try{const s=localStorage.getItem("wuwa");if(s)return render(JSON.parse(s))}catch(e){}
+  $("app").innerHTML='<div class="mut">还没有数据。运行爬虫生成 data.json，或在上方手动导入。</div>';
+  $("imp").open=true;
+});
+if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js").catch(()=>{});
 </script>
 </body>
 </html>
