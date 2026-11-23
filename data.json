@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23 02:46",
+  "updated": "2026-11-23 02:53",
   "versions": {
     "2.5": {
       "codes": [],
@@ -481,48 +481,6 @@
         }
       ],
       "welfare": [
-        {
-          "text": "✦更新维护补偿：星声*300、结晶溶剂*2",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "✦补偿领取条件：2026年9月30日04:00（UTC+8）前创建角色且解锁【邮件】功能，补偿邮件领取有效期至下个版本更新维护前。",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "✦问题修复补偿：星声*300",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "活动开启期间，每天服务器时间04:00登录游戏即可累计1次登录天数，累计登录天数达到指定要求后，即可领取对应的累计签到奖励。",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "【累计登录1天】：浮金波纹*5、特级调谐器*100",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "【累计登录3天】：浮金波纹*5、结晶溶剂*5",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "3.7版本将开放活动「凝月辉途」，活动期间内，累计获得「月影溯环」可解锁以下全新奖励内容",
-          "kind": "条目",
-          "source": "官方公告(B站)",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
         {
           "text": "鸣潮3.7版本可以获得多少星声统计-V3.7星声统计_3DM手游",
           "kind": "条目",
