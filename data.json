@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26 02:45",
+  "updated": "2026-11-26 02:51",
   "versions": {
     "2.5": {
       "start": "",
@@ -751,8 +751,113 @@
       "welfare": []
     },
     "3.7": {
-      "start": "",
-      "activities": [],
+      "start": "2026-09-30",
+      "activities": [
+        {
+          "name": "团团勇者大乱斗",
+          "type": "休闲活动",
+          "start": "2026-09-30 04:00",
+          "end": "2026-11-11 11:59",
+          "days": 42,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "梦构匣中",
+          "type": "区域探索活动",
+          "start": "2026-09-30 04:00",
+          "end": "2026-11-11 03:59",
+          "days": 42,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "故梦寻契",
+          "type": "留影收集活动",
+          "start": "2026-09-30 04:00",
+          "end": "永久",
+          "days": "永久",
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "朝月赠礼",
+          "type": "七日签到活动",
+          "start": "2026-09-30 04:00",
+          "end": "2026-11-11 03:59",
+          "days": 42,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "索拉里斯回归邀约",
+          "type": "网页活动",
+          "start": "2026-09-30 04:00",
+          "end": "2026-11-11 23:59",
+          "days": 43,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "天工寻物",
+          "type": "限时战斗活动",
+          "start": "2026-10-08 04:00",
+          "end": "2026-10-26 03:59",
+          "days": 18,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "朝月鱼涌",
+          "type": "网页活动",
+          "start": "2026-10-15 10:00",
+          "end": "2026-11-01 09:59",
+          "days": 17,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "无音消除",
+          "type": "休闲活动",
+          "start": "2026-10-22 10:00",
+          "end": "2026-11-09 03:59",
+          "days": 18,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "凭栏听雨之礼",
+          "type": "限时签到活动",
+          "start": "2026-10-22 10:00",
+          "end": "2026-11-11 03:59",
+          "days": 20,
+          "reward": [
+            "浮金波纹×5",
+            "特级调谐器×100",
+            "结晶溶剂×5"
+          ],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "name": "踏潮探历・玄方地界",
+          "type": "限时探索委托活动",
+          "start": "2026-10-29 04:00",
+          "end": "2026-11-11 03:59",
+          "days": 13,
+          "reward": [],
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        }
+      ],
       "codes": [
         {
           "code": "FALLINGSANCTUM",
@@ -771,6 +876,48 @@
         }
       ],
       "welfare": [
+        {
+          "text": "✦更新维护补偿：星声*300、结晶溶剂*2",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "✦补偿领取条件：2026年9月30日04:00（UTC+8）前创建角色且解锁【邮件】功能，补偿邮件领取有效期至下个版本更新维护前。",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "✦问题修复补偿：星声*300",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "活动开启期间，每天服务器时间04:00登录游戏即可累计1次登录天数，累计登录天数达到指定要求后，即可领取对应的累计签到奖励。",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "【累计登录1天】：浮金波纹*5、特级调谐器*100",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "【累计登录3天】：浮金波纹*5、结晶溶剂*5",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
+        {
+          "text": "3.7版本将开放活动「凝月辉途」，活动期间内，累计获得「月影溯环」可解锁以下全新奖励内容",
+          "kind": "条目",
+          "source": "官方公告",
+          "url": "https://www.bilibili.com/read/cv53233769"
+        },
         {
           "text": "鸣潮3.7版本可以获得多少星声统计-V3.7星声统计_3DM手游",
           "kind": "条目",
