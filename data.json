@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26 02:51",
+  "updated": "2026-11-27 02:46",
   "versions": {
     "2.5": {
       "start": "",
@@ -123,95 +123,8 @@
       ]
     },
     "2.6": {
-      "start": "2025-08-28",
-      "activities": [
-        {
-          "name": "狩原逐影",
-          "type": "留影收集活动，探索「桑古伊斯",
-          "start": "2025-08-28 04:00",
-          "end": "2025-10-08 03:59",
-          "days": 41,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "行狩赠礼",
-          "type": "七日签到活动",
-          "start": "2025-08-28 04:00",
-          "end": "2025-10-08 03:59",
-          "days": 41,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "索拉里斯回归邀约",
-          "type": "召集昔日同伴回归索拉里斯，共",
-          "start": "2025-08-28 04:00",
-          "end": "2025-10-08 23:59",
-          "days": 42,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "潮蚀模拟",
-          "type": "残象防御主题活动",
-          "start": "2025-08-30 10:00",
-          "end": "2025-10-08 11:59",
-          "days": 39,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "兽痕解析",
-          "type": "限时解谜活动",
-          "start": "2025-09-04 04:00",
-          "end": "2025-09-22 03:59",
-          "days": 18,
-          "reward": [
-            "星声×400",
-            "星声×480"
-          ],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "第二索拉“终极版”",
-          "type": "休闲活动",
-          "start": "2025-09-17 04:00",
-          "end": "2025-10-06 03:59",
-          "days": 19,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "月华解明",
-          "type": "月相解读活动",
-          "start": "2025-09-25 04:00",
-          "end": "2025-10-08 03:59",
-          "days": 13,
-          "reward": [
-            "星声×400",
-            "星声×480"
-          ],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "name": "踏潮探历・黎那汐塔",
-          "type": "限时探索委托活动",
-          "start": "2025-09-25 04:00",
-          "end": "2025-10-08 03:59",
-          "days": 13,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        }
-      ],
+      "start": "",
+      "activities": [],
       "codes": [
         {
           "code": "BURNINGSUN",
@@ -230,42 +143,6 @@
         }
       ],
       "welfare": [
-        {
-          "text": "✦更新维护补偿：星声*300、结晶溶剂*2",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "text": "✦补偿领取条件：2025年8月28日04:00（UTC+8）前创建角色且解锁【邮件】功能，补偿邮件领取有效期至下个版本更新维护前。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "text": "✦问题修复补偿：星声*300",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "text": "✦奖励内容：浮金波纹*10、铸潮波纹*10",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "text": "活动期间每日登录游戏可获取1枚「海中月」，最多可获取10枚。消耗「海中月」可解明月相并获取对应奖励及限时增益效果。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
-        {
-          "text": "- 新增【深境区・深境之塔】第3层与第4层的挑战内容，达成所有挑战目标获得满印记后可额外获得星声*100、贝币*100000、深境记录*240。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1105988490044112932"
-        },
         {
           "text": "《鸣潮》2.6版本星声汇总！共计可获得这些星声？_游戏新闻_17173.com中国游戏门户站",
           "kind": "条目",
@@ -460,127 +337,10 @@
       ]
     },
     "3.0": {
-      "start": "2025-12-25",
-      "activities": [
-        {
-          "name": "开学赠礼",
-          "type": "七日签到活动",
-          "start": "2025-12-25 04:00",
-          "end": "2026-02-04 03:59",
-          "days": 41,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "name": "音速异闻",
-          "type": "「女神异闻录5",
-          "start": "2025-12-25 04:00",
-          "end": "2026-02-04 03:59",
-          "days": 41,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "name": "踏潮探历・拉海洛",
-          "type": "限时探索委托活动",
-          "start": "2026-01-01 04:00",
-          "end": "2026-01-19 03:59",
-          "days": 18,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "name": "星炬竞速赛",
-          "type": "休闲活动",
-          "start": "2026-01-15 04:00",
-          "end": "2026-02-04 03:59",
-          "days": 20,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "name": "来自寂静之声",
-          "type": "休闲活动",
-          "start": "2026-01-22 04:00",
-          "end": "2026-02-04 03:59",
-          "days": 13,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        }
-      ],
+      "start": "",
+      "activities": [],
       "codes": [],
       "welfare": [
-        {
-          "text": "✦更新维护补偿：星声*300、结晶溶剂*2",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "✦补偿领取条件：2025年12月25日04:00（UTC+8）前创建角色且解锁【邮件】功能，补偿邮件领取有效期至下个版本更新维护前。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "✦问题修复补偿：星声*300",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "3.0版本开启后，登录游戏即可通过邮件领取以下奖励内容。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "浮金波纹*10、结晶溶剂*10",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "✦领取条件：联觉等级达到2级，解锁【邮件】功能，奖励邮件领取有效期至下个版本更新维护前。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "5星武器「溢彩荧辉」（佩枪）",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "共有9处停影散落在「拉海洛」各个区域。跟随线索的指引，前往对应区域探索，拍摄正确的照片或在目标地点搜寻，即可完成收集任务，领取对应奖励。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "- 在对应的活动期间选择双倍领取，若当前剩余活动双倍奖励次数大于2次，则会消耗2次活动双倍奖励次数获取4倍奖励，若当前剩余活动双倍奖励次数只有1次，则会消耗1次活动双倍奖励次数获取3倍奖励。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "- 新增【回音结晶】奖励的额外领取方式，每周将刷新2次无需消耗结晶波片即可领取【回音结晶】奖励的次数，无消耗领取次数与【千道门扉的异想】周期同步刷新，未被使用的次数不可累积，还请注意。（※无消耗领取次数为单倍领取）",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
-        {
-          "text": "- 优化调整【千道门扉的异想】的单次探索流程中，【回音结晶】奖励的可领取次数，由2次增加至4次。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/opus/1150147651539304472"
-        },
         {
           "text": "《鸣潮》3.0前瞻总结！10连福利+300星声兑换码！_游戏新闻_17173.com中国游戏门户站",
           "kind": "条目",
@@ -751,113 +511,8 @@
       "welfare": []
     },
     "3.7": {
-      "start": "2026-09-30",
-      "activities": [
-        {
-          "name": "团团勇者大乱斗",
-          "type": "休闲活动",
-          "start": "2026-09-30 04:00",
-          "end": "2026-11-11 11:59",
-          "days": 42,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "梦构匣中",
-          "type": "区域探索活动",
-          "start": "2026-09-30 04:00",
-          "end": "2026-11-11 03:59",
-          "days": 42,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "故梦寻契",
-          "type": "留影收集活动",
-          "start": "2026-09-30 04:00",
-          "end": "永久",
-          "days": "永久",
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "朝月赠礼",
-          "type": "七日签到活动",
-          "start": "2026-09-30 04:00",
-          "end": "2026-11-11 03:59",
-          "days": 42,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "索拉里斯回归邀约",
-          "type": "网页活动",
-          "start": "2026-09-30 04:00",
-          "end": "2026-11-11 23:59",
-          "days": 43,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "天工寻物",
-          "type": "限时战斗活动",
-          "start": "2026-10-08 04:00",
-          "end": "2026-10-26 03:59",
-          "days": 18,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "朝月鱼涌",
-          "type": "网页活动",
-          "start": "2026-10-15 10:00",
-          "end": "2026-11-01 09:59",
-          "days": 17,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "无音消除",
-          "type": "休闲活动",
-          "start": "2026-10-22 10:00",
-          "end": "2026-11-09 03:59",
-          "days": 18,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "凭栏听雨之礼",
-          "type": "限时签到活动",
-          "start": "2026-10-22 10:00",
-          "end": "2026-11-11 03:59",
-          "days": 20,
-          "reward": [
-            "浮金波纹×5",
-            "特级调谐器×100",
-            "结晶溶剂×5"
-          ],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "name": "踏潮探历・玄方地界",
-          "type": "限时探索委托活动",
-          "start": "2026-10-29 04:00",
-          "end": "2026-11-11 03:59",
-          "days": 13,
-          "reward": [],
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        }
-      ],
+      "start": "",
+      "activities": [],
       "codes": [
         {
           "code": "FALLINGSANCTUM",
@@ -876,48 +531,6 @@
         }
       ],
       "welfare": [
-        {
-          "text": "✦更新维护补偿：星声*300、结晶溶剂*2",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "✦补偿领取条件：2026年9月30日04:00（UTC+8）前创建角色且解锁【邮件】功能，补偿邮件领取有效期至下个版本更新维护前。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "✦问题修复补偿：星声*300",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "活动开启期间，每天服务器时间04:00登录游戏即可累计1次登录天数，累计登录天数达到指定要求后，即可领取对应的累计签到奖励。",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "【累计登录1天】：浮金波纹*5、特级调谐器*100",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "【累计登录3天】：浮金波纹*5、结晶溶剂*5",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
-        {
-          "text": "3.7版本将开放活动「凝月辉途」，活动期间内，累计获得「月影溯环」可解锁以下全新奖励内容",
-          "kind": "条目",
-          "source": "官方公告",
-          "url": "https://www.bilibili.com/read/cv53233769"
-        },
         {
           "text": "鸣潮3.7版本可以获得多少星声统计-V3.7星声统计_3DM手游",
           "kind": "条目",
